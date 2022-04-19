@@ -67,6 +67,14 @@
             background-color: #F7F052;
             color: black;
         }
+      
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+        .active {
+            background-color: #04AA6D;
+        }
+      
         @media screen and (max-width:600px) 
         {
             .column
@@ -78,7 +86,7 @@
       <body style="background-color: #38726c;" >
 
     <div class="topnav">
-        <a href="index.html">Home</a>
+        <a class="active" href="index.html">Home</a>
         <a href="AframeModel.html">Model Test</a>
         <a href="contact.html">Contact Us</a>
     </div>
