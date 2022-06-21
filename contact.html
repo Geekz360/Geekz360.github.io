@@ -125,3 +125,47 @@
     </div>
 
 </html>
+<script>
+function verify()
+{
+    var name = document.forms["Form1"]["uname"].value;
+    var accname = false;
+    if(name==null || name=="")
+    {
+        alert("No username entered!");
+        return false;
+    }
+    else
+    {
+        accname = true;
+    }
+    
+    var email = document.forms["Form1"]["email"].value;
+    if(email==null || email=="")
+    {
+        alert("Email Blank!");
+        return false;
+    }
+    else
+    {
+        var found_atsymbol = 0;
+        var found_dotsymbol = 0;
+        
+        for(i=0;i<email.length;i++)
+        {
+            if(email[i]=='@'){found_atsymbol=i;}
+            if(email[i]=='.'){found_dotsymbol=i;}
+        }
+        if(found_atsymbol>0 && found_dotsymbol>found_atsymbol+3)
+        {
+            alert("Email and Username Accepted!");
+        }
+        else
+        {
+            alert("Please check email");
+        }
+    
+    }
+
+}    
+</script>
