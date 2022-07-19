@@ -3,11 +3,43 @@
   <head>
     <title>Model Test</title>  
   <style>
+    
+        * {
+            box-sizing: border-box;
+        }
+
         .header 
         {
             background-color: #F28123;
             padding: 0px;
             text-align: center;
+        }
+    
+    .column 
+        {
+            border-radius: 10px;
+            float: left;
+            width: 33.3%;
+            padding: 10px;
+            column-gap: 10px;
+        }
+        
+        
+        .column1
+        {
+            border-radius: 25px;
+            float: left;
+            width: 100%;
+            padding: 10px;
+            column-gap: 10px;
+        }
+
+
+        .row:after 
+        {
+            content: "";
+            display: table;
+            clear: both;
         }
       
     .topnav 
@@ -65,6 +97,9 @@
     </div>
   </head>
   <body style="background-color: #38726c;">
+    <div class="row">
+      <div class="column"></div>
+    <div class="column" style="background-color: #563F1B;" align=center>
     <a-scene embedded arjs>
       <a-gltf-model position="0 -1 -20" rotation="45 0 0" scale"0.7 0.7 0.7" src="images/BroomBroom.gltf"></a-gltf-model>
       
@@ -73,5 +108,8 @@
        </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+    </div>
+    <div class="column"></div>
+    </div>
   </body>
 </html>
